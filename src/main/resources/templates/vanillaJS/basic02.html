@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>script async 와 defer의 차이점 및 앞으로 자바스크립트 공부 방향</title>
+	<script defer src="../../static/js/basic02main.js"></script>
+</head>
+<body>
+<p>자바스크 공부시 참조하면 좋은 사이트? </p>
+<p>developer.mozilla.org</p>
+
+<p>HTML에 js파일 포함하는 여러 방법들</p>
+<div>
+	<p>*head에 포함하는 방법</p>
+	<img src="/image/0201.png" alt="스프링부트는 static폴더 주소를 / 로부터 시작함. 인텔리제이의 문법체크가 안맞음 ">
+	<p>브라우저는 HTML파일을 한 줄 한 줄 분석(parsing HTML)</p>
+	<p>script 태그가 보이면 parsing을 잠시 멈추고(blocked), 서버로부터 js파일을 다운로드(fetching js) 하고 실행(excuting js)</p>
+	<p>js의 실행이 끝나면 다시 parsing</p>
+	<p>--> js파일이 클수록 유저는 웹페이지 보기까지 오래걸린다</p>
+	<p> </p>
+</div>
+
+<div>
+	<p>*body의 가장 밑에 포함시키는 방법</p>
+	<img th:src="@{/image/0202.png}" alt="타임리프 이용">
+	<p>기본적인 html의 파싱 -> js패칭 -> js실행</p>
+	<p>--> 장: 유저는 기본적인 html을 빨리 볼 수 있음</p>
+	<p>--> 단: 페이지가 js에 의존적이라면(서버에서 데이터 받는다던가, 페이지를 꾸민다던가...) , 사용자가 "의미있는" 페이지를 보기위해 시간이 걸린다</p>
+</div>
+
+<div>
+	<p>*head + async</p>
+	<img src="/image/0203.png" alt="서버X HTML파일에서는 전부다 안보이겠지만, 반대로 서버 기동된 상태에서 보인다">
+	<p>async 사용->파싱 처리와 병렬로 패칭이 이루어진다</p>
+	<p>js다운완료되면 파싱 멈추고 js실행 -> 파싱</p>
+	<p>--> 장: js 다운로드 시간 절약</p>
+	<p>--> 단: js 실행 시점에서 HTML 파싱이 완전히 이루어지지 않은 경우에(원하는 요소가 정의되지 않은 경우), JS에서 DOM요소 조작 문제가 생김</p>
+	<p>--> 단: 여전히 파싱시간 오래걸림</p>
+</div>
+
+<div>
+	<p>*head + defer  => 가장 적절한 방법</p>
+	<img src="/image/0204.png" alt="">
+	<p>defer 사용->파싱 처리와 병렬로 패칭이 이루어진다(여기까지는 async와 동일)</p>
+	<p>그러나 js의 실행을 html파싱이 끝난 후에 한다!</p>
+	<p>--> 장: 사용자가 기본적인 페이지를 보는 시간도 빠르고, 바로 js 이용된 페이지를 보게할 수 있다</p>
+</div>
+
+<div>
+	<p>*async vs defer</p>
+	<img src="/image/0205.png" alt="">
+	<p>--> 정의된 순서에 상관없이, 패칭 완료된 순서로 js가 실행됨</p>
+	<p>--> js가 순서에 의존적인 구조로 짜여있다면, 문제발생</p>
+	<img src="/image/0206.png" alt="">
+	<p>--> 정의된 순서로 js가 실행됨</p>
+	<p>--> 제어가능하여 안전함</p>
+</div>
+
+<div>
+	<p>중요!</p>
+	<p>(바닐라)js파일의 가장 위에 'use strict' 를 선언하자 (ECMAscript5 부터 도입됨)</p>
+	<p>Why? js는 굉장히 유연한 언어 = 위험함</p>
+	<p>선언되지 않은 변수에 값을 할당하거나, 타입을 변경가능</p>
+	<p> 'use strict'  를 사용하여 이를 불가능하게 한다.</p>
+	<p>브라우저가 js를 조금 더 빨리 분석 = 성능개선도 기대할 수 있다</p>
+
+
+</div>
+</body>
+</html>

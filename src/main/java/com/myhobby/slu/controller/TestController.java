@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class TestController {
 
 
-    @GetMapping("/test")
+    @GetMapping("/")
     public String toTest() {
         log.error("로그 테스트 : Log4j2의 에러 로그");
         log.warn("로그 테스트 : Log4j2의 경고 로그");
         log.info("로그 테스트 : Log4j2의 정보 로그 ");
 
-        return "test/index";
-
+        return "redirect:/vjs/b01";
     }
 }
