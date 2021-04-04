@@ -4,110 +4,133 @@
   <meta charset="UTF-8">
   <title>This is test page</title>
   <script defer src="/js/jquery-3.6.0.min.js"></script>
-  <script defer src="/js/index.js"></script>
+  <!--  <script defer src="/js/index.js"></script>-->
   <link rel="stylesheet" href="/css/index.css">
 </head>
 <body th:align="center">
-<h1>바닐라 자바스크립트 기초</h1>
-<table id="spreadsheet">
-  <tr>
-    <td></td>
-    <th colspan="4">기록</th>
-  </tr>
-  <tr>
-    <th></th>
-    <td><a th:href="@{/vjs/b01}">JS간단 역사</a></td><td><a th:href="@{/vjs/b02}">HTML에 js파일 포함하는 방법들</a></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>  <tr>
-  <th></th>
-  <td></td><td></td><td></td><td></td>
-</tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
+
+<div class="container">
+  <table id="spreadsheet">
+    <tr>
+      <td></td>
+      <th colspan="4"><h1 style="color: white">바닐라 자바스크립트 기초</h1></th>
+    </tr>
+    <tr>
+      <th></th>
+      <td>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>js간단 역사</h2>
+            <p>1 / 23</p>
+            <a th:href="@{/vjs/b01}">read more</a>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>HTML에<br> js파일포함하는 방법들</h2>
+            <p>2 / 23</p>
+            <a th:href="@{/vjs/b02}">read more</a>
+          </div>
+        </div>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>  <tr>
     <th></th>
     <td></td><td></td><td></td><td></td>
   </tr>
-  <tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>  <tr>
     <th></th>
     <td></td><td></td><td></td><td></td>
   </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>  <tr>
-  <th></th>
-  <td></td><td></td><td></td><td></td>
-</tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td></td><td></td><td></td><td></td>
-  </tr>
-</table>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td><td></td><td></td><td></td>
+    </tr>
+  </table>
+</div>
+
 </body>
 </html>
