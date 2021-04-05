@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+
+<div>
+	<p>2. Variable</p>
+	<p>let 키워드</p>
+	<p>ES6 부터 추가.block scope</p>
+	<p>*block scope?</p>
+	<p>코드를 { } 로 감싸 작성하면</p>
+	<p>블럭 밖에서는 접근할 수 없다.</p>
+	<p>반대로 블럭 밖에서 선언했다면 어디서나 접근가능</p>
+	<p>-> 글로벌 스코프</p>
+	<br/>
+	<p>var 키워드</p>
+	<p>js 초창기에는 유연함을 이용해 빠른개발 가능했으나</p>
+	<p>플젝 규모가 커질스룩 위험성 증가</p>
+	<p>아직까지 쓰고 있다면? 개선을 고려해야한다.</p>
+	<p>-> 변수를 선언하기 전에 사용하는 것을 허용해버린다.</p>
+	<p>-> 출력시 에러가 나야할 부분이 undefined가 출력되는 등...</p>
+	<p>-> var hoisting : 어디에 선언했는가 상관없이, 클라이언트가 처리할 때</p>
+	<p>->가장 위로 끌어올림</p>
+	<p>또한, block scope를 무시한다...어디에서나 접근가능해진다.</p>
+
+</div>
+<div>
+	<p>3. Constant</p>
+	<p>상수. 값을 할당 뒤 변경불가 = immutable</p>
+	<p> 왜 사용? </p>
+	<p> -> 보안상의 이유. 외부요인(해킹)에 의해 값이 변경되지 않게. </p>
+	<p> -> Thread safety. 여러Thread가 접근하는 연산의 경우, 값 일관성  </p>
+	<p> -> 개발시 실수(human mistake)  방지  </p>
+</div>
+
+<div>
+	<p>4. Variable Types</p>
+	<p>primitive type : 더이상 작은 단위로 나뉘어질 수 없는, single item</p>
+	<p>-> number, string, boolean, null, undifined, symbol</p>
+	<p>Object type : single item을 묶어서 한 박스로, 한 단위로 관리하게 해주는 타입</p>
+	<p>JS에서는 function도 데이터 타입중하나 -> first-class function</p>
+	<p>-> 변수에 할당 가능하고, 인자로 전달하거나 리턴에 넣을 수 도 있다. </p>
+
+</div>
+
+<div>
+	<p>C언어의 숫자 데이터 타입</p>
+	<img th:src="@{/image/0301.png}" alt="타임리프 이용">
+	<p>-> 할당할 값의 크기를 미리 생각해서 형을 지정해줘야 메모리 낭비 방지가능</p>
+</div>
+
+<div>
+	<p>자바의 숫자 데이터 타입</p>
+	<img th:src="@{/image/0302.png}" alt="타임리프 이용">
+	<p>-> 자바도 마찬가지로 숫자형이 여럿있다 = 할당할 값의 크기를 미리 생각 필요</p>
+</div>
+
+<div>
+	<p>자바의스크립트숫자 데이터 타입</p>
+	<img th:src="@{/image/0303.png}" alt="타임리프 이용">
+	<p>-> number 단 하나뿐</p>
+	<p>-> 심지어, js에서는 타입이 다이나믹하게 결정되기 때문에, ' let ' 으로 할당해도 된다...</p>
+	<p>-> 단, type script에서는 number 라고 명시적으로 작성해 줘야 함 ( let a: number = 1.2 )</p>
+</div>
+
+<div>
+	<p>특별한 숫자값</p>
+	<p> const infinity = 1 / 0;   (이게 왜 에러가 안나지?)</p>
+	<p> const negativeInfinity  = -1 / 0;   (이게 왜 에러가 안나지222)</p>
+	<p> const nAn  = 'not a number' / 2;   (이게 왜 에러가 안나지333)</p>
+	<p>위 세 가지를 콘솔로그로 찍어보면 각각 INfinity, -Infinity, NaN 이 출력됨</p>
+</div>
+<div>
+	<p>최근에, bigInt형이 추가됨(아직 크롬, 파폭에서만 지원됨)</p>
+	<p>숫자 끝에 알파펫n 을 붙이면 됨.</p>
+	<p>const bigInt = 1111111111111222222222222222333333333333334444444444444n</p>
+</div>
+
+<div>
+	<p>string</p>
+	<p>타 언어에서는 '문자' 와 '문자열' 의 데이터 타입이 나뉜경우가 있지만(char, String )</p>
+	<p>js에서는 string타입 뿐 </p>
+	<p>백틱기호( ` ) : template literals</p>
+	<p>-> 문자열 내부에서 변수를 사용할 때 매우 편리</p>
+	<p>-> 기존에는 '문자열' + 변수 + '문자열' ... 식으로 나누어 붙이는 식으로 작성했다면</p>
+	<p>-> 백틱( ` )을 사용하면 '문자열 ${변수} 문자열...' 로 한 번에 작성가능 </p>
+</div>
+<div>
+	<p>boolean</p>
+	<p>false : 조건식을 만족하지 않는 경우, 0, null, undefined, NaN, ''</p>
+	<p>false : 조건식을 만족하는 경우, any other value</p>
+</div>
+
+<div>
+	<p>null, undefined</p>
+	<p>null - > 선언 후 (명시적으로) null을 할당한 경우</p>
+	<p>null - > 아무런 할당을 하지 않은 경우</p>
+</div>
+<div>
+	<p>symbol</p>
+	<p>식별자(유니크)가 필요한 경우</p>
+	<p>const symbol1 = Symbol('id');</p>
+	<p>const symbol2 = Symbol('id');</p>
+	<p>symbol1 === symbol2  -> false</p>
+	<p>동일한 string을('id') 사용였지만, Symbol은 고유하므로 서로 다름.</p>
+	<p>...동일한 string을 사용하고 싶다면</p>
+	<p>const symbol1 = Symbol.for('id');</p>
+	<p>const symbol2 = Symbol.for('id');</p>
+	<p>symbol1 === symbol2  -> true</p>
+</div>
+
+<button type="button" class="navyBtn" onClick="location.href='/'">돌아가기</button>
+
+</body>
+</html>
