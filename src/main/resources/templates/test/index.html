@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <title>This is test page</title>
   <script defer src="/js/jquery-3.6.0.min.js"></script>
-  <!--  <script defer src="/js/index.js"></script>-->
 
   <!--  for server -->
   <link rel="stylesheet" href="/css/index.css">
+  <script defer src="/js/clock.js"></script>
+
   <!--  for local debug-->
 <!--  <link rel="stylesheet" href="../../static/css/index.css">-->
+<!--  <script defer src="../../static/js/clock.js"></script>-->
+
 </head>
 <body th:align="center">
 <div class="container">
@@ -151,6 +154,18 @@
     </tr>
   </table>
 </div>
-
+<section>
+  <div class="clock">
+    <div class="container">
+      <h2 id="hour">00</h2>
+      <h2 class="dot">:</h2>
+      <h2 id="minute">00</h2>
+      <h2 class="dot">:</h2>
+      <h2 id="second">00</h2>
+      <span id="ampm">AM</span>
+    </div>
+  </div>
+</section>
 </body>
+
 </html>
