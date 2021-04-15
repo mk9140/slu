@@ -100,6 +100,8 @@ fruits.splice(2); // deleteCount 지정하지 않으면, start인덱스부터 �
 console.log(fruits);
 //splice한 뒤, 원하는 데이터를 추가도 가능
 fruits.splice(1, 1, '🍏', '🍈' );
+// 여기서, deleteCount 를 0으로 하면, 지우지 않고도 삽입 가능
+
 console.log(fruits);
 
 // 두 배열을 합치기
