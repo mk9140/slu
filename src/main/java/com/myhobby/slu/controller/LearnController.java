@@ -35,5 +35,15 @@ import org.springframework.web.bind.annotation.GetMapping;
         return "vanillaJS/basic06";
     }
 
+    @GetMapping("/vjs/b07")
+    public String toBasic07() {
+        return "vanillaJS/basic07";
+    }
+
+    @GetMapping("/vjs/b08")
+    public String toBasic08() {
+        return "vanillaJS/basic08";
+    }
+
 }
 
