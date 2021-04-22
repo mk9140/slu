@@ -56,6 +56,12 @@ import org.springframework.web.bind.annotation.GetMapping;
     }
 
 
+    @GetMapping("/vjs/b11")
+    public String toBasic11() {
+        return "vanillaJS/basic11";
+    }
+
+
 
 
 
