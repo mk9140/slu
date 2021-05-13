@@ -5,15 +5,32 @@
 	<title>노마드코더초 보자를 위한 바닐라 자바스크립트</title>
 	<!--  for server -->
 	<script defer src="/js/nomadCoder_index.js"></script>
+	<script defer src="/js/nomadCoder_clock.js"></script>
+	<script defer src="/js/nomadCoder_greeting.js"></script>
 	<link rel="stylesheet" href="/css/nomadCoder_index.css">
 	<!--  for local debug-->
 <!--	<script defer src="../../static/js/nomadCoder_index.js"></script>-->
+<!--	<script defer src="../../static/js/nomadCoder_clock.js"></script>-->
+<!--	<script defer src="../../static/js/nomadCoder_greeting.js"></script>-->
 <!--	<link rel="stylesheet" href="../../static/css/nomadCoder_index.css">-->
 
 
 </head>
 <body>
-<h1 id = "title" class="btn">JS파일에 메모.</h1>>
+<h1 id = "title" class="btn">JS파일에 메모.</h1>
+
+<div class="js-clock">
+	<h1 class="js-title"></h1>
+</div>
+<form class = "js-form form">
+	<label>
+		<input type="text" placeholder="what is your name">
+	</label>
+</form>
+<h4 class="js-greetings greetings"></h4>
+
 <button type="button" class="navyBtn" onClick="location.href='/'">돌아가기</button>
+
+
 </body>
 </html>
