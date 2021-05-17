@@ -1,7 +1,6 @@
 'use strict';
 /* (작은)자료의 저장. Local storage */
 
-
 const form = document.querySelector(".js-form");
 const input = form.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
@@ -34,7 +33,6 @@ function askForName() {
 /* localStorage에 저장된 이름이 있는 경우 */
 function paintGreeting(text) {
 	// input 이 있는 form을 안 보이도록 class 이름 설정
-	console.log(`sdfsdf`);
 	form.classList.remove(SHOWING_CN);
 
 	// 환영 메세지가 보이도록 class 이름 설정

@@ -7,11 +7,14 @@
 	<script defer src="/js/nomadCoder_index.js"></script>
 	<script defer src="/js/nomadCoder_clock.js"></script>
 	<script defer src="/js/nomadCoder_greeting.js"></script>
+	<script defer src="/js/nomadCoder_todoList.js"></script>
 	<link rel="stylesheet" href="/css/nomadCoder_index.css">
+
 	<!--  for local debug-->
 <!--	<script defer src="../../static/js/nomadCoder_index.js"></script>-->
 <!--	<script defer src="../../static/js/nomadCoder_clock.js"></script>-->
 <!--	<script defer src="../../static/js/nomadCoder_greeting.js"></script>-->
+<!--	<script defer src="../../static/js/nomadCoder_todoList.js"></script>-->
 <!--	<link rel="stylesheet" href="../../static/css/nomadCoder_index.css">-->
 
 
@@ -28,7 +31,10 @@
 	</label>
 </form>
 <h4 class="js-greetings greetings"></h4>
-
+<form class="js-toDoForm">
+	<input type="text" placeholder="Write a to do">
+</form>
+<ul class="js-toDoList"></ul>
 <button type="button" class="navyBtn" onClick="location.href='/'">돌아가기</button>
 
 
